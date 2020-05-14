@@ -1,0 +1,7 @@
+<% if @doctor %>
+<h2>Doctor: <%= @doctor.name %></h2>
+<% end %>
+<% @appointments.each do |appointment| %>
+    <h4>Patient: <%= appointment.patient.name %></h4>
+    <%= appointment.appointment_date.strftime("%H:%M %A, %B %d") %>
+<% end %>
